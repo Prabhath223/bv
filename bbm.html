@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A4 Size Page with Image</title>
+  <style>
+    
+   
+    .a4-page {
+      width: 208.5mm; /* Reduce width by 1.5mm (1.5px / 2 for both sides) */
+      height: 295.5mm; /* Reduce height by 1.5mm (1.5px / 2 for both sides) */
+      margin: 20px auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+      box-sizing: border-box; /* Ensure the border is included in the width and height */
+      position: relative;
+    }
+
+    /* Create the thin border using pseudo-elements */
+    .a4-page::before {
+      content: "";
+      position: absolute;
+      top: 1cm;
+      bottom: 1cm;
+      left: 1cm;
+      right: 1cm;
+      border: 1.5px solid black;
+      pointer-events: none; /* This ensures the border doesn't interfere with mouse events */
+    }
+
+    /* .header {
+      width: 100%;
+      height: 100px;
+      background-color: #ccc; /* Use any background color for the header */
+    
+/* 
+    .header img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: 0 auto;
+    } */ 
+
+    .content {
+      padding: 20px;
+    }
+    .iml{
+        position: absolute;
+        margin-left: 300px;
+        margin-top: 50px;
+    }
+    .h30{
+      margin-left: 230px;
+      margin-top: 300px;
+        color: black;
+    }
+    .h31{
+        margin-left: 310px;
+    }
+    .v,ol{
+        margin-left: 100px;
+    }
+    .bg{
+        margin-left: 90px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="a4-page">
+    <div class="header">
+      <!-- Replace "your-image.jpg" with the path to your image -->
+     <img src="ghl.jpg" class="iml" alt="Header Image">
+    </div>
+    <div class="content">
+      <!-- Your content goes here -->
+      <h3 class="h30">CYBER CRIME DEPARTMENT</h3><h3 class="h31">CYBERABAD</h3>
+      <p class="v">IMEI Tracking Out-Turns</p>
+      <code>
+        <ol>
+            <li>  IMEI:  356153100576682 <br> Phone: 8142625955<br>Name: Nagula Srinivasulu
+            <br>Aadhaar Number:</li><br>
+            <li>
+                IMEI: 567157843590761 <br>Phone: 9908593781<br>Name: MD.Hussain
+                <br>Aadhaar Number: 
+            </li>
+        </ol>
+      <br>
+     
+<span class="bg">    21/07/2023 03:50AM<br><span class="bg"> Coordinates IMEI1 17.9689° N, 79.5941° E  <br><span class="bg"></span>  IMEI2 17.9689° N, 79.5941° E</span> 
+      </code>
+      <!-- Add more content as needed -->
+    </div>
+  </div>
+</body>
+
+</html>
